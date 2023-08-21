@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Roopert";
+  src: url(../assets/fonts/Roobert-Regular.otf) format("opentype"),
+       url(../assets/fonts/Roobert-Medium.otf) format("opentype"),
+       url(../assets/fonts/Roobert-SemiBold.otf) format("opentype");
+  font-weight: normal, medium, bold;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roopert", Helvetica, sans-serif;
+    font-size: var(--fs-s);
+}
+
+body {
+    overflow: overlay;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --almost-white: #f0f0f0; 
+    --light-grey: #cecece;
+    --dark-grey: #5B5B5B;
+
+    --fs-xxl: clamp(80px, 70px + 2vw, 110px);
+    --fs-xl: clamp(60px, 40px + 2vw, 80px);
+    --fs-l: clamp(36px, 30px + 1.5vw, 50px);
+    --fs-ml: clamp(25px, 40px - 1.5vw, 35px);
+    --fs-m: 18px;
+    --fs-s: 16px;
+    --fs-xs: 13px;
+
+    --big-radius: 10px;
+    --small-radius: 5px;
+
+    --margin-section: 150px;
+    --margin-sub-section: 75px;
+    --margin-title: 0.5em;
+    --margin-text: 1.5em;
+
+    --base-pad: clamp(28px, 20px + 2vw, 50px)
+}
+
+.white {color: var(--white);}
+.black {color: var(--black);}
+
+::selection {
+  color: none;
+  background: var(--light-grey);
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+  color: none;
+  background: none;
+}
+
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+
+  
+  html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  
+  .has-scroll-smooth body {
+    overflow: hidden; }
+  
+  .has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh; }
+  
+  [data-scroll-direction="horizontal"] [data-scroll-container] {
+    height: 100vh;
+    display: inline-block;
+    white-space: nowrap; }
+  
+  [data-scroll-direction="horizontal"] [data-scroll-section] {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    height: 100%; }
+
+
+  
+  .c-scrollbar {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0; }
+    .c-scrollbar:hover {
+      transform: scaleX(1.45); }
+    .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+      opacity: 1; }
+    [data-scroll-direction="horizontal"] .c-scrollbar {
+      width: 100%;
+      height: 10px;
+      top: auto;
+      bottom: 0;
+      transform: scaleY(1); }
+      [data-scroll-direction="horizontal"] .c-scrollbar:hover {
+        transform: scaleY(1.3); }
+  
+  .c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--light-grey);
+    opacity: 0.5;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: -webkit-grab;
+    cursor: grab; }
+    .has-scroll-dragging .c-scrollbar_thumb {
+      cursor: -webkit-grabbing;
+      cursor: grabbing; }
+    [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+      right: auto;
+      bottom: 0; }
+
+
+      html.has-scroll-smooth {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+      }
+      
+      [data-load-container] {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+      }
+    

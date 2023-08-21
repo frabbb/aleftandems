@@ -1,0 +1,167 @@
+#order-container {padding: calc(clamp(60px, 50px + 2vh, 80px) + var(--base-pad)) var(--base-pad) var(--base-pad);}
+
+#order {display: flex; justify-content: space-between;}
+
+#finish-order {width: 70%;}
+
+#order-recap {width: 20%; padding: 0; overflow: hidden; align-self: flex-start;}
+
+#tandem-specs {margin-bottom: 50px; align-items: flex-start;}
+
+.rounded-field {
+    background-color: var(--almost-white); 
+    border-radius: var(--small-radius); padding: 1em 1.5em;
+}
+
+.plus-minus {
+    width: 20px; height: 20px;
+    background-color: var(--light-grey);
+    position: relative;
+    border-radius: 10px;
+    transition: 0.3s; cursor: pointer;
+}
+
+.plus-minus:hover {background-color: var(--dark-grey);}
+.plus-minus:hover .sign-line{background-color: var(--white);}
+.plus-minus.inactive {background-color: transparent; cursor: default}
+.plus-minus.inactive:hover .sign-line{background-color: var(--black);}
+
+.sign-line {
+    width: 10px; height: 1px; border-radius: 2px;
+    background-color: var(--black);
+    position: absolute; top: 50%; left: 50%;
+}
+.sign-line {transform: translate(-50%, -50%);}
+#btn-plus :last-child {transform: translate(-50%, -50%) rotate(90deg);}
+
+.quantity {text-align: center; width: 1em;}
+.quantity.align-right {text-align: right; width: auto;}
+
+.dropdown-container {position: relative;}
+
+.dropdown {
+    background-color: var(--light-grey);
+    border-radius: var(--small-radius);
+    display: flex; position: relative;
+    cursor: pointer;
+    width: calc(100% + 3em)
+}
+
+.dropdown img {
+    display: block; height: 0.5em; align-self: flex-start; 
+    position: absolute; top: 0.85em; right: 0.5em;
+    transition: 0.3s; transition-timing-function: ease-in-out;
+}
+
+.dropdown img.rotated {transform: rotate(180deg);}
+
+.options-container {
+    border-radius: var(--small-radius);
+    overflow: hidden; width: 100%;
+    max-height: calc(1em * 1.2 + 2 * 0.5em); transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.options-container.active {
+    max-height: 100vh;
+    outline: 1px solid var(--light-grey);
+}
+
+.options-container p {padding: 0.5em; transition: 0.3s; cursor: pointer; width: 100%;}
+.options-container.active p:hover {background-color: var(--almost-white);}
+
+.input-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 40px; column-gap: 20px;
+    align-items: flex-start;
+    width: 60%; margin-bottom: 75px;
+}
+
+.input-icon-container .unit {position: absolute; right: 1.5em; top: 0.5em;}
+
+input {
+    background-color: var(--almost-white); 
+    width: 100%;
+    border-radius: var(--small-radius); padding: 0.5em 1.5em;
+    outline: solid rgba(255, 255, 255, 0) 2px; outline-offset: 2px;
+    transition: 0.3s;
+}
+
+input::placeholder {color: var(--light-grey);}
+
+input:focus {outline-color: var(--light-grey); background-color: var(--white);}
+
+.input-container {width: 100%; position: relative;}
+
+.input-container.invalid input {
+    outline-color: #c76068;
+    color: #c76068;
+    background-color: #fff7f7;
+}
+
+.input-container .error-message {
+    margin-top: 0.5em;
+    color: #c76068;
+    display: none; position: absolute;
+    width: 100%;
+}
+
+.input-container.invalid .error-message {
+    display: block;
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.img-container {display: flex; justify-content: center; width: 100%;}
+#order-recap img {width: 80%;}
+#recap-details {background-color: var(--black); padding: 1em;}
+#recap-details p {font-size: var(--fs-xs);}
+#recap-grid {display: grid; gap: 0.5em; grid-template-columns: repeat(2, 1fr); margin-bottom: 2.5em;}
+
+
+@media screen and (max-width: 1300px) {
+
+    #order-recap { width: 25%; }
+    .input-grid {width: 100%;}
+    
+}
+
+@media screen and (max-width: 950px) {
+
+    #order {flex-direction: column;}
+
+    #order-recap, #finish-order {width: 100%;}
+    
+}
+
+@media screen and (max-width: 700px) {
+    
+    .input-grid {grid-template-columns: none;}
+
+    #tandem-specs {flex-direction: column; align-items: flex-start; gap: 1em;}
+
+    #tandem-specs > div {
+        width: 100%; display: flex; justify-content: space-between;
+        font-size: var(--fs-s);
+    }
+
+    .dropdown {width: 60%;}
+
+    #tandem-specs > div > p {font-size: var(--fs-s); margin: 0.5em 0;} 
+    #tandem-specs > div > p:nth-child(even), .quantity {font-weight: bold;} 
+
+    #recap-details h4 {text-align: center;}
+    #recap-details button {position: relative; left: 50%; transform: translateX(-50%);}
+    
+}
