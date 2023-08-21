@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alef</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="assets/images/alef-logo-black.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+  </head>
+  <body>
+
+    <div id="loading">
+      <img src="assets/images/Alef1.svg" alt="" id="alef-1" class="alef">
+      <img src="assets/images/Alef2.svg" alt="" id="alef-2" class="alef">
+    </div>
+
+    <div data-scroll-container reloadOnContextChange="true">
+
+    <header class="space-between" >
+      <div id="logo-container">
+        <a href="index.html"><img src="assets/images/Alef-logotype-white.svg" alt="" id="logo"> </a>
+      </div>
+
+      
+      <ul id="nav-link-container">
+        <li class="nav-link"><a class="white" href="bikes.html">All tandems</a></li>
+        <li class="nav-link"><a class="white" href="howitsmade.html">How it's made</a></li>
+        <li class="nav-link"><a class="white" href="about.html">About</a></li>
+        
+        <button class="btn-white" onclick="window.location.href='order.html'">Order now</button>
+
+        <div id="cross">
+          <img src="assets/images/cross-black.png" onclick="toggleNav()" alt="">
+        </div>
+      </ul>
+
+      <div id="burger-container">
+        <img src="assets/images/hamburger-white.svg" alt="" id="burger" onclick="toggleNav()"> 
+      </div>
+
+
+    </header>
+
+    <div id="hero">
+
+      <div id="video-container">
+        <video src="assets/images/Hero.m4v" muted autoplay loop playsinline></video> 
+        <div id="video-overlay"></div>
+      </div>
+      
+      <div id="hero-text">
+        <h1 class="white" style="text-align: center;">Better <br> together</h1>
+        <button class="btn-white" id="discover-tandems">Discover Alef tandems</button>
+      </div>
+      
+      <div id="arrow-container">
+        <img src="assets/images/arrow.png" alt="">
+        <img src="assets/images/arrow.png" alt="">
+      </div>
+
+    </div>
+
+    <div data-scroll data-scroll-repeat data-scroll-section data-scroll-offset="90%" data-scroll-call="changeNav" id="landing">
+
+      <section class="landing-text-section desktop">
+
+        <p class="big-p">
+          All Alef tandems are unique pieces, tailor made by hand. <br> We know how difficult it is to find the perfect bike, <br> but what if it was made specifically for you? 
+          <br><br>
+          <a href="">Learn more on the process</a>
+        </p>
+
+        <h2>
+          Unique handmade tandems
+        </h2>
+
+      </section>
+
+      <section class="landing-text-section mobile">
+        
+        <h2 >
+          Unique handmade tandems
+        </h2>
+
+        <p class="big-p">
+          All Alef tandems are unique pieces, tailor made by hand. <br> We know how difficult it is to find the perfect bike, <br> but what if it was made specifically for you? 
+          <br><br>
+          <a href="">Learn more on the process</a>
+        </p>
+
+      </section>
+
+      <section class="landing-img-section">
+
+        <div class="spacer">
+          <div data-scroll data-scroll-speed="4" class="card-container small-card">
+            <div class="img-container">
+              <img src="assets/images/racing-light.jpg" alt="">
+            </div>
+            <div class="card-details space-between">
+              <p> <span class="bold">Alef 2</span> - Race Light </p>
+              <p><a href="racehard.html">Order now</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer">
+          <div data-scroll data-scroll-speed="2" class="card-container big-card">
+            <div class="img-container">
+              <img src="assets/images/racing-hard.jpg" alt="">
+            </div>
+            <div class="card-details space-between">
+              <p> <span class="bold">Alef 2</span> - Race Light </p>
+              <p><a href="racehard.html">Order now</a></p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="landing-text-section">
+        
+        <h2>
+          Light and durable
+        </h2>
+
+        <p class="big-p">
+          Using the aluminium 7020 bind, the tandems stay light, while keeping the resistance necessary to support two people
+          <br><br>
+          <a href="racehard.html">Learn more on the process</a>
+        </p>
+
+      </section>
+
+      <section class="landing-img-section">
+      
+        <div class="spacer">
+          <div data-scroll data-scroll-speed="2" class="card-container big-card">
+            <div class="img-container">
+              <img src="assets/images/touring.jpg" alt="">
+            </div>
+            <div class="card-details space-between">
+              <p> <span class="bold">Alef 2</span> - Race Light </p>
+              <p><a href="racehard.html">Order now</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer">
+          <div data-scroll data-scroll-speed="4" class="card-container small-card">
+            <div class="img-container">
+              <img src="assets/images/classic.jpg" alt="">
+            </div>
+            <div class="card-details space-between">
+              <p> <span class="bold">Alef 2</span> - Race Light </p>
+              <p><a href="racehard.html">Order now</a></p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="products" style="margin-bottom: 0; padding-bottom: 150px;">
+        <h1 style="text-align: center;">Our tandems</h1>
+
+        <div class="product-grid">
+
+          <div link="racehard.html" class="product-card">
+            <div>
+            <h4 style="margin-bottom: 0.3em;">Race Light</h4>
+            <p>The fastest and lightest aluminium tandem</p>
+            </div>
+            
+            <div class="product-img-container">
+            <img src="assets/images/tandem1.png" alt="">
+            </div>
+
+            <div class="product-card-bottom space-between">
+            <button onclick="window.location.href='racehard.html'" class="btn-white">Order now</button>
+
+            <div class="spec-container space-between">
+              <p>Shimano</p>
+              <p>3kg frame</p>
+            </div>
+            </div>
+
+          </div>
+          
+          <div link="racehard.html" class="product-card">
+            <div>
+            <h4 style="margin-bottom: 0.3em;">Race Light</h4>
+            <p>The fastest and lightest aluminium tandem</p>
+            </div>
+            
+            <div class="product-img-container">
+            <img src="assets/images/tandem1.png" alt="">
+            </div>
+
+            <div class="product-card-bottom space-between">
+            <button onclick="window.location.href='racehard.html'" class="btn-white">Order now</button>
+
+            <div class="spec-container space-between">
+              <p>Shimano</p>
+              <p>3kg frame</p>
+            </div>
+            </div>
+
+          </div>
+
+          <div link="racehard.html" class="product-card">
+            <div>
+            <h4 style="margin-bottom: 0.3em;">Race Light</h4>
+            <p>The fastest and lightest aluminium tandem</p>
+            </div>
+            
+            <div class="product-img-container">
+            <img src="assets/images/tandem1.png" alt="">
+            </div>
+
+            <div class="product-card-bottom space-between">
+            <button onclick="window.location.href='racehard.html'" class="btn-white">Order now</button>
+
+            <div class="spec-container space-between">
+              <p>Shimano</p>
+              <p>3kg frame</p>
+            </div>
+            </div>
+
+          </div>
+
+          <div link="racehard.html" class="product-card">
+            <div>
+            <h4 style="margin-bottom: 0.3em;">Race Light</h4>
+            <p>The fastest and lightest aluminium tandem</p>
+            </div>
+            
+            <div class="product-img-container">
+            <img src="assets/images/tandem1.png" alt="">
+            </div>
+
+            <div class="product-card-bottom space-between">
+              <button onclick="window.location.href='racehard.html'" class="btn-white">Order now</button>
+
+              <div class="spec-container space-between">
+                <p>Shimano</p>
+                <p>3kg frame</p>
+              </div>
+            </div>
+
+          </div>
+         
+
+        </div>
+      </section>
+
+    </div>
+
+    <div data-scroll-section class="img-text-section" style="position: relative; z-index: 1;">
+
+      <div class="img-spacer">
+
+        <div class="img-container">
+          <img src="assets/images/syauqy-ayyash-2R89AuluRI4-unsplash.jpg" alt="">
+        </div>
+
+      </div>
+
+      <div class="text-spacer">
+        <h2 class="white">How they are made</h2>
+        <p class="white big-p">All Alef tandems are unique pieces, tailor made by hand. 
+          We know how difficult it is to find the perfect bike, 
+          but what if it was made specifically for you? </p>
+        <button class="btn-white" onclick="window.location.href='howitsmade.html'">See the process</button>
+      </div>
+
+    </div>
+
+    <footer class="space-between" data-scroll-section style="position: relative; z-index: 1;">
+
+      <div id="footer-logo">
+        <img src="assets/images/Alef-logotype-white.svg" alt="" style="filter: invert(1);">
+      </div>
+  
+      <div id="footer-text">
+        <a href="">Instagram</a>
+        <a href="">alef@gmail.com</a>
+        <p>+39 3208373127</p>
+      </div>
+
+    </footer>
+
+    
+    </div>
+    
+    <script src="js/scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+
+  </body>
+</html>

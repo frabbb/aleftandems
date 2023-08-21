@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alef</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" href="assets/images/alef-logo-black.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+  </head>
+  <body>
+
+    <!-- <div id="loading">
+      <img src="assets/images/Alef1.svg" alt="" id="alef-1" class="alef">
+      <img src="assets/images/Alef2.svg" alt="" id="alef-2" class="alef">
+    </div> -->
+
+    <div data-scroll-container reloadOnContextChange="true">
+
+    <header class="space-between white" >
+      <div id="logo-container">
+        <a href="index.html"><img src="assets/images/Alef-logotype-white.svg" alt="" class="black" id="logo"> </a>
+      </div>
+
+      
+      <ul id="nav-link-container">
+        <li class="nav-link"><a class="black" href="bikes.html">All tandems</a></li>
+        <li class="nav-link"><a class="black" href="howitsmade.html">How it's made</a></li>
+        <li class="nav-link"><a class="black" href="about.html">About</a></li>
+        
+        <button class="btn-black" onclick="window.location.href='order.html'">Order now</button>
+
+        <div id="cross">
+          <img src="assets/images/cross-black.png" onclick="toggleNav()" alt="">
+        </div>
+      </ul>
+
+      <div id="burger-container">
+        <img src="assets/images/hamburger-white.svg" alt="" class="black" id="burger" onclick="toggleNav()"> 
+      </div>
+
+
+    </header>
+
+    <div data-scroll-section id="product">
+        <div class="product-images">
+
+          <div class="img-container span-2 tandem-model">
+            <img class="desktop" src="assets/images/tandem-model.png" alt="">
+            <img class="mobile" src="assets/images/tandem-model-mobile.png" alt="">
+          </div>
+          <div class="img-container"><img src="assets/images/classic.jpg" alt=""></div>
+          <div class="img-container"><img src="assets/images/classic.jpg" alt=""></div>
+          <div class="img-container span-2"><img src="assets/images/classic.jpg" alt=""></div>
+          <div class="img-container"><img src="assets/images/classic.jpg" alt=""></div>
+          <div class="img-container"><img src="assets/images/classic.jpg" alt=""></div>
+        </div>
+
+        <div data-scroll data-scroll-sticky data-scroll-target="#product" data-scroll-offset="0, 23%" id="product-buy">
+
+            <div class="buy-top">
+                
+                <h3 id="model"class="text-margin-s">Race Hard</h3>                    
+                
+                <p class="product-description">Designed for both very stable and performing, perfect for long roadtrips.</p>
+            </div>
+
+            <div class="specs-selector">
+                <p class="text-margin-m">Color</p>
+                <div class="color-selector text-margin-l">
+
+                    <div class="color black" id="selected-color"></div>
+                    <div class="color grey"></div>
+                    <div class="color white"></div>
+                    <div class="color orange"></div>
+                    <div class="color blue"></div>
+                    <div class="color" id="personalize-color">
+                        <div class="color-gradient"></div>
+                        <div class="plus-sign">
+                            <div style="transform: translate(-50%, -50%);" class="plus-sign-line"></div>
+                            <div style="transform: translate(-50%, -50%) rotate(90deg);" class="plus-sign-line"></div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <p class="text-margin-m">Components</p>
+                <div class="component-selector text-margin-l">
+                    <div class="component-set" id="selected-components"> <p>Ultegra Di2</p> </div>
+                    <div class="component-set"> <p>Ultegra meccanico</p> </div>
+                    <div class="component-set"> <p>105 Di2</p> </div>
+                    <div class="component-set"> <p>105 meccanico</p> </div>
+                </div>
+            </div>
+
+            
+            <div>
+              
+              <p> Price </p>
+
+              <div class="buy-bottom">
+                <h3 id="price">€ 6400</h3>
+                <button onclick="selectTandem()" class="btn-black">Select tandem</button>
+              </div>
+
+              
+            </div>
+            
+
+        </div>
+
+        <div class="product-images mobile">
+
+        </div>
+
+
+
+    </div>
+
+    <footer class="space-between" data-scroll-section style="position: relative; z-index: 1;">
+
+      <div id="footer-logo">
+        <img src="assets/images/Alef-logotype-white.svg" alt="" style="filter: invert(1);">
+      </div>
+  
+      <div id="footer-text">
+        <a href="">Instagram</a>
+        <a href="">alef@gmail.com</a>
+        <p>+39 3208373127</p>
+      </div>
+
+    </footer>
+
+    
+    </div>
+    
+    <script src="js/scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+
+  </body>
+</html>
