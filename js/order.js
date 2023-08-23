@@ -22,7 +22,10 @@ let measurementsString = heights[0].value + " cm, " + heights[1].value + " cm";
 let inputFields = document.querySelectorAll("input")
 
 let dropdowns = document.querySelectorAll(".dropdown");
-let optionsContainers = document.querySelectorAll(".options-container")
+let optionsContainers = document.querySelectorAll(".options-container");
+
+let orderConfirmation = document.querySelector("#order-confirmation");
+let confirmationTl = gsap.timeline();
 
 const serviceID = "service_20ycbvl";
 const templateID = "template_qsalkwn"
@@ -209,9 +212,9 @@ function sendEmail() {
 
         console.log(order)
 
-        emailjs.send(serviceID, templateID, order);
+        //emailjs.send(serviceID, templateID, order);
 
-        inputFields.forEach((field) => {field.value = ""})
+        openOrderConfirmation()
 
     } else {
 
@@ -225,6 +228,30 @@ function sendEmail() {
 
     } 
     
+}
+
+function openOrderConfirmation() {
+
+    
+    scroll.stop();
+    body.classList.add("no-scroll")
+
+    confirmationTl.restart()
+
+    confirmationTl
+    .to("#order-confirmation", { display: "block" })
+    .to("#order-confirmation", { opacity: 1, duration: 0.3 })
+    .to("#popup", { scale: 0.9, duration: 0.3, ease: "back.out(2)" }, "<")
+    .add(function() {orderConfirmation.classList.add("active");}, "<")
+
+    inputFields.forEach((field) => {field.value = ""})
+
+}
+
+function closeOrderConfirmation() {
+    confirmationTl.reverse()
+    scroll.start()
+    body.classList.remove("no-scroll")
 }
 
 updateDomValues()

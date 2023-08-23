@@ -159,7 +159,7 @@
                   <p class="error-message">Make sure you put in an email adresse</p>
                 </div>
                 <div class="input-container" data-error="Make sure your phone number includes the national prefix">
-                  <input class="phoneNumber" type="tel" placeholder="Phone number" pattern="\+[0-9]{2,3}[0-9]{10}">
+                  <input class="phoneNumber" type="tel" placeholder="Phone number (optional)" pattern="\+[0-9]{2,3}[0-9]{10}">
                   <p class="error-message">Make sure your phone number is correct and includes the national prefix</p>
                 </div>
 
@@ -200,10 +200,23 @@
         </div>
         
     </div>
-
-
-
     
+    <div id="order-confirmation">
+      <div class="overlay"></div>
+      <div id="popup">
+
+        <div class="wrapper">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> 
+          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        </div>
+
+        <h3>Got it!</h3>
+        <p>Your order has been requested, we'll get back to you within 24 hours to discuss all the details.</p>
+        <button class="btn-black" onclick="closeOrderConfirmation()" > Ok </button>
+      </div>
+    </div>
 
     <footer class="space-between" data-scroll-section style="position: relative; z-index: 1;">
 
