@@ -28,7 +28,8 @@ let orderConfirmation = document.querySelector("#order-confirmation");
 let confirmationTl = gsap.timeline();
 
 const serviceID = "service_20ycbvl";
-const templateID = "template_qsalkwn"
+const toAlefTemplateID = "template_qsalkwn"
+const toUserTemplateID = "template_gqmz2kk"
 
 
 if(localStorage.getItem("tandem")) {tandem = JSON.parse(localStorage.getItem("tandem"));}
@@ -105,8 +106,6 @@ dropdowns.forEach((dropdown) => {
         let optionsContainer = dropdown.parentElement.querySelector(".options-container");
 
         optionsContainer.classList.toggle("active");
-
-        dropdown.querySelector("img").classList.toggle("rotated");
 
         let options = optionsContainer.querySelectorAll("p")
 
@@ -212,7 +211,8 @@ function sendEmail() {
 
         console.log(order)
 
-        //emailjs.send(serviceID, templateID, order);
+        //emailjs.send(serviceID, toAlefTemplateID, order);
+        emailjs.send(serviceID, toUserTemplateID, order);
 
         openOrderConfirmation()
 

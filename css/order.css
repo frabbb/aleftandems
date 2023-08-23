@@ -48,17 +48,17 @@
 }
 
 .dropdown img {
-    display: block; height: 0.5em; align-self: flex-start; 
+    height: 0.5em; align-self: flex-start; 
     position: absolute; top: 0.85em; right: 0.5em;
     transition: 0.3s; transition-timing-function: ease-in-out;
 }
 
-.dropdown img.rotated {transform: rotate(180deg);}
+.options-container.active img {transform: rotate(180deg);}
 
 .options-container {
     border-radius: var(--small-radius);
     overflow: hidden; width: 100%;
-    max-height: calc(1em * 1.2 + 2 * 0.5em); transition: 0.3s;
+    max-height: calc(1em * 1.2 + 2 * 0.5em); transition: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
